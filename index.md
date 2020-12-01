@@ -13,11 +13,14 @@ First, note that k-means on a 321 x 481image in sequence takes 63.94 seconds whe
 We  tested  our  implementation  on  different  iteration  in  k-means  as  well. It did not seem to be the case that range of iterations affects the effectiveness of parallelization,  which  makes  sense  given  that  no  parallelization  happens  overiterations. 
 
 <img src="Images/k-means OpenMP: Execution Times.png" height="300">
-![](Images/k-means OpenMP: Execution Times.png)
 
-In  CUDA,  for  k-means  (k=3),  we  notice  140.025549  seconds  are  required  for32384 iterations.  For other number of iterations tested, CUDA times are consis-tently approx.  2x the sequential times.  This is likely due to a small fundamentalbug, which we aim to fix as the next step.For Otsu binarization on image of dimensions10315 x 7049, we get the follow-ing execution times with different number of threads/processors (1,2,4,8,16,24)on OpenMP.
+In  CUDA,  for  k-means  (k=3),  we  notice  140.025549  seconds  are  required  for 32384 iterations.  For other number of iterations tested, CUDA times are consis-tently approx.  2x the sequential times.  This is likely due to a small fundamental bug, which we aim to fix as the next step.
 
-While some speedup is noticed in all cases with respect to sequential code, wedo not observe linear speedup.We  describe  some  of  our  implementation  details  and  corresponding  observa-tions below:
+For Otsu binarization on image of dimensions 10315 x 7049, we get the following execution times with different number of threads/processors (1,2,4,8,16,24)on OpenMP.
+
+<img src="Images/Otsu OpenMP: Execution Times.png" height="300">
+
+While some speedup is noticed in all cases with respect to sequential code, wedo not observe linear speedup. We  describe  some  of  our  implementation  details  and  corresponding  observa-tions below:
 1.   When  implementing  k-means  and  Otsu  in  OpenMP,  we  realized  that  allowing contention when an operation is parallelized over pixels a generally bad idea.  We tried to reduce the number of sequential loops in our algorithms by including some operations within critical regions in less number of loops.  In general, this was a bad strategy due to terrible contention as a result of a very high number of pixels.  Here, the contention dampened the benefits of parallelization.
 
 2.  For k-means, in line with our observations, we did not yet expect speedups with respect to k.  In OpenMP/CUDA, we currently do not parallelize over k.The only operation truly parallelizable over k is when we update the means ofeach cluster.  We just decided to parallelize over the pixels and apply a parallelreduce/scan  to  update  these  cluster  means,  where  each  cluster  is  handled  in sequence.  We aim to test nested parallelization over k as well.3.   We  found  exclusive  scan  in  parallel  to  be  very  useful.   Using  it  for  sum-mation  in  CUDA  k-means  and  for  cumulative  histogram  generation  in  Otsu Binarization improved our speedups significantly.
