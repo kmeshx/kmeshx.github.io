@@ -35,10 +35,11 @@ Currently,  we  are  not  seeing  speedup  relative  to  sequential  code  in  C
 
 # 6  Remaining Goals
 Fix CUDA bug 12/1 Kusha
-Otsu CUDA 12/1 Kusha
-Edge Detection Seq 12/2 Shreya 
-Edge Detection OpenMP 12/3 Shreya 
-Edge Detection CUDA 12/5 Kusha
-Optimizations 12/8 Both
-Testing, Analysis 12/11 Both 
-Writeup, Presentation 12/14 Both
+<br>
+Otsu CUDA 12/1 Kusha<br>
+Edge Detection Seq 12/2 Shreya <br>
+Edge Detection OpenMP 12/3 Shreya <br>
+Edge Detection CUDA 12/5 Kusha<br>
+Optimizations 12/8 Both<br>
+Testing, Analysis 12/11 Both <br>
+Writeup, Presentation 12/14 Both<br>
