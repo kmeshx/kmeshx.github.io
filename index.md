@@ -12,7 +12,8 @@ Thus far, we have completed the code for k-means in sequential C++, OpenMP and C
 First, note that k-means on a 321 x 481image in sequence takes 63.94 seconds when number of iterations it is run for = 32384 and k=3. We present the graph of execution times on OpenMP with different number ofthreads/processors (1,2,4,8,16,24).  We notice near linear speedup.1
 We  tested  our  implementation  on  different  iteration  in  k-means  as  well. It did not seem to be the case that range of iterations affects the effectiveness of parallelization,  which  makes  sense  given  that  no  parallelization  happens  overiterations. 
 
-![](Images/k-means OpenMP\/ Execution Times.png)
+<img src="https://octodex.github.com/Images/k-means OpenMP: Execution Times.png" height="300">
+![](Images/k-means OpenMP: Execution Times.png)
 
 In  CUDA,  for  k-means  (k=3),  we  notice  140.025549  seconds  are  required  for32384 iterations.  For other number of iterations tested, CUDA times are consis-tently approx.  2x the sequential times.  This is likely due to a small fundamentalbug, which we aim to fix as the next step.For Otsu binarization on image of dimensions10315 x 7049, we get the follow-ing execution times with different number of threads/processors (1,2,4,8,16,24)on OpenMP.
 
