@@ -10,15 +10,15 @@ CUDA and OpenMP.
 
 # 2  Some Results
 
-<img src="Images/Cache Miss %/ Scan vs Chunked.jpg" height="300">
+<img src="Images/Cache Miss %: Scan vs Chunked.jpg" height="300">
 
 
-<img src="Images/Cache References/ Scan vs Chunked.jpg" height="300">
+<img src="Images/Cache References: Scan vs Chunked.jpg" height="300">
 
 
-# 3 Final Project Report
-<a href="/pdfs/ProjMarr_slides.pdf">Final Report</a>
-# 4 Checkpoint Project Report
-<a href="/pdfs/ProjMarr_slides.pdf">Final Report</a>
+# 3 Checkpoint Project Report
+<a href="/pdfs/Project_Checkpoint (1).pdf">Final Report</a>
+# 4 Final Project Report
+<a href="/pdfs/418_CP__Copy_.pdf">Final Report</a>
 # 5 Code
 Currently unavailable to view here.
