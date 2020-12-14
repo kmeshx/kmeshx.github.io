@@ -22,7 +22,7 @@ CUDA and OpenMP.
 
 
 # 3 Checkpoint Project Report
-<a href="/pdfs/Project_Checkpoint (1).pdf">Final Report</a>
+<a href="/pdfs/Project_Checkpoint (1).pdf">Checkpoint Report</a>
 # 4 Final Project Report
 <a href="/pdfs/418_CP__Copy_.pdf">Final Report</a>
 # 5 Code
