@@ -9,11 +9,18 @@ Binarization, and Edge detection algorithms in C++ and their corresponding paral
 CUDA and OpenMP.
 
 # 2  Some Results
+(see final report for detailed analysis and complete results!)
 
-<img src="Images/Cache Miss %: Scan vs Chunked.jpg" height="300">
+<img src="Images/Cache Miss \%: Scan vs Chunked.jpg" height="300">
 
 
 <img src="Images/Cache References: Scan vs Chunked.jpg" height="300">
+
+
+<img src="Images/Cuda Execution Times(Streaming).jpg" height="300">
+
+
+<img src="Images/Execution Times: Sequential vs Scan vs Chunked.jpg" height="300">
 
 
 # 3 Checkpoint Project Report
