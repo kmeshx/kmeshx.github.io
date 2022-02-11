@@ -19,11 +19,7 @@ CUDA and OpenMP.
 
 <img src="Images/Cuda Execution Times(Streaming).jpg" height="300">
 
-
-
-# 3 Checkpoint Project Report
-<a href="/pdfs/Project_Checkpoint (1).pdf">Checkpoint Report</a>
-# 4 Final Project Report
+# 3 Final Project Report
 <a href="/pdfs/418_CP__Copy_.pdf">Final Report</a>
-# 5 Code
+# 4 Code
 Currently unavailable to view here.
